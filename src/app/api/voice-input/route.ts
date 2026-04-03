@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Transcribe audio using ASR
-    const transcription = await asr.transcribe({
+    const transcription = await (asr as any).transcribe({
       audio: `data:audio/wav;base64,${audio}`,
     });
 

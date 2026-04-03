@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Generate audio using TTS
-    const audioResult = await tts.speech({
+    const audioResult = await (tts as any).speech({
       input: message,
       voice: language === 'telugu' ? 'te-IN-Standard-A' :
              language === 'tamil' ? 'ta-IN-Standard-A' :
