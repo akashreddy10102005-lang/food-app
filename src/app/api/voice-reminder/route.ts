@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { tts } from 'z-ai-web-dev-sdk';
+import  tts  from 'z-ai-web-dev-sdk';
 import { translations, type Language } from '@/lib/translations';
 
 export async function POST(request: NextRequest) {

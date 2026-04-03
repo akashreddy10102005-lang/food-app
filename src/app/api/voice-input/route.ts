@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { asr } from 'z-ai-web-dev-sdk';
+import  asr  from 'z-ai-web-dev-sdk';
 
 export async function POST(request: NextRequest) {
   try {
