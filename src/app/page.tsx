@@ -55,6 +55,7 @@ export default function NutriScanApp() {
     height: '',
     gender: '',
     healthIssues: [] as string[],
+    otherHealthIssues: '',
     dietaryGoals: '',
     allergies: [] as string[],
   });
@@ -88,20 +89,42 @@ export default function NutriScanApp() {
   ];
 
   const handleProfileSubmit = () => {
-    if (!formData.name || !formData.age || !formData.weight || !formData.height || !formData.gender || !formData.dietaryGoals) {
-      toast.error('Please fill in all required fields');
+    // Validation
+    if (!formData.name?.trim()) {
+      toast.error('Please enter your name');
+      return;
+    }
+    if (!formData.age || parseInt(formData.age) < 1 || parseInt(formData.age) > 120) {
+      toast.error('Please enter a valid age (1-120)');
+      return;
+    }
+    if (!formData.weight || parseFloat(formData.weight) < 20 || parseFloat(formData.weight) > 300) {
+      toast.error('Please enter a valid weight (20-300 kg)');
+      return;
+    }
+    if (!formData.height || parseFloat(formData.height) < 100 || parseFloat(formData.height) > 250) {
+      toast.error('Please enter a valid height (100-250 cm)');
+      return;
+    }
+    if (!formData.gender) {
+      toast.error('Please select your gender');
+      return;
+    }
+    if (!formData.dietaryGoals) {
+      toast.error('Please select your dietary goal');
       return;
     }
 
     const newUser = {
       id: `user-${Date.now()}`,
-      name: formData.name,
+      name: formData.name.trim(),
       email: `${formData.name.toLowerCase().replace(/\s/g, '')}@example.com`,
       age: parseInt(formData.age),
       weight: parseFloat(formData.weight),
       height: parseFloat(formData.height),
       gender: formData.gender as 'male' | 'female' | 'other',
       healthIssues: formData.healthIssues,
+      otherHealthIssues: formData.otherHealthIssues?.trim() || undefined,
       dietaryGoals: formData.dietaryGoals as 'weight_loss' | 'weight_gain' | 'maintenance',
       language,
       allergies: formData.allergies,
@@ -315,6 +338,18 @@ export default function NutriScanApp() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Other Health Issues */}
+          <div>
+            <Label className="text-purple-900">{t.otherHealthIssues}</Label>
+            <Textarea
+              className="mt-2"
+              placeholder={t.otherHealthIssuesPlaceholder}
+              value={formData.otherHealthIssues}
+              onChange={(e) => setFormData({ ...formData, otherHealthIssues: e.target.value })}
+              rows={3}
+            />
           </div>
 
           {/* Dietary Goals */}

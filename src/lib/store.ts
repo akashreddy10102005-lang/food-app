@@ -1,57 +1,16 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { Language } from './translations';
-
-export interface UserProfile {
-  id?: string;
-  name?: string;
-  email?: string;
-  age?: number;
-  weight?: number;
-  height?: number;
-  gender?: 'male' | 'female' | 'other';
-  healthIssues?: string[];
-  dietaryGoals?: 'weight_loss' | 'weight_gain' | 'maintenance';
-  language: Language;
-  allergies?: string[];
-  calorieTarget?: number;
-  proteinTarget?: number;
-  carbsTarget?: number;
-  fatTarget?: number;
-  voiceReminders?: boolean;
-}
-
-export interface FoodLog {
-  id: string;
-  userId: string;
-  imageUrl?: string;
-  foodName: string;
-  foodItems: string[];
-  calories: number;
-  protein: number;
-  carbs: number;
-  fat: number;
-  fiber?: number;
-  sugar?: number;
-  vitamins?: Record<string, number>;
-  minerals?: Record<string, number>;
-  healthRating: 'good' | 'moderate' | 'avoid';
-  recommendation?: string;
-  mealType: 'breakfast' | 'lunch' | 'snacks' | 'dinner';
-  portionSize?: string;
-  isRestaurant: boolean;
-  loggedVia: 'image' | 'voice' | 'manual';
-  createdAt: Date;
-}
+import type { UserProfile, FoodLog, AppView } from '@/types';
 
 interface AppState {
   user: UserProfile | null;
   language: Language;
-  currentView: 'onboarding' | 'home' | 'analysis' | 'dashboard' | 'profile' | 'diet-plan' | 'grocery' | 'transformation';
+  currentView: AppView;
   setUser: (user: UserProfile) => void;
   updateUser: (updates: Partial<UserProfile>) => void;
   setLanguage: (language: Language) => void;
-  setCurrentView: (view: AppState['currentView']) => void;
+  setCurrentView: (view: AppView) => void;
   logout: () => void;
 }
 
