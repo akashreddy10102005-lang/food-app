@@ -1,0 +1,129 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String             @id @default(cuid())
+  name            String?
+  email           String?            @unique
+  age             Int?
+  weight          Float?             // in kg
+  height          Float?             // in cm
+  gender          String?            // male, female, other
+  healthIssues    String?            // JSON array of health issues
+  dietaryGoals    String?            // weight_loss, weight_gain, maintenance
+  language        String             @default("english") // english, telugu, tamil, kannada
+  allergies       String?            // JSON array of allergies
+  calorieTarget   Int?               @default(2000)
+  proteinTarget   Float?             @default(50) // in grams
+  carbsTarget     Float?             @default(250) // in grams
+  fatTarget       Float?             @default(65) // in grams
+  voiceReminders  Boolean            @default(true)
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+
+  foodLogs        FoodLog[]
+  mealPlans       MealPlan[]
+  reminders       Reminder[]
+  bodyTransformations BodyTransformation[]
+  groceryLists    GroceryList[]
+}
+
+model FoodLog {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  imageUrl        String?
+  foodName        String
+  foodItems       String   // JSON array of detected food items
+  calories        Float
+  protein         Float
+  carbs           Float
+  fat             Float
+  fiber           Float?
+  sugar           Float?
+  vitamins        String?  // JSON object
+  minerals        String?  // JSON object
+  healthRating    String   // good, moderate, avoid
+  recommendation  String?
+  mealType        String   // breakfast, lunch, snacks, dinner
+  portionSize     String?
+  isRestaurant    Boolean  @default(false)
+  loggedVia       String   // image, voice, manual
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model MealPlan {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  date            DateTime
+  breakfast       String?  // JSON of meal details
+  lunch           String?
+  snacks          String?
+  dinner          String?
+  totalCalories   Int?
+  totalProtein    Float?
+  totalCarbs      Float?
+  totalFat        Float?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model Reminder {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  mealType        String   // breakfast, lunch, snacks, dinner
+  time            String   // HH:MM format
+  message         String?
+  isEnabled       Boolean  @default(true)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model BodyTransformation {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  beforeImage     String?
+  afterImage      String?
+  weight          Float?
+  notes           String?
+  date            DateTime @default(now())
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model GroceryList {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  items           String   // JSON array of grocery items
+  date            DateTime @default(now())
+  isCompleted     Boolean  @default(false)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}

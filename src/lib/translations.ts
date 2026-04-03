@@ -1,0 +1,564 @@
+export type Language = 'english' | 'telugu' | 'tamil' | 'kannada';
+
+export const translations = {
+  english: {
+    // App Title & Navigation
+    appName: 'NutriScan AI',
+    home: 'Home',
+    dashboard: 'Dashboard',
+    profile: 'Profile',
+    settings: 'Settings',
+
+    // Onboarding/Profile
+    welcome: 'Welcome to NutriScan AI',
+    setupProfile: 'Let\'s set up your profile',
+    name: 'Name',
+    age: 'Age',
+    weight: 'Weight (kg)',
+    height: 'Height (cm)',
+    gender: 'Gender',
+    male: 'Male',
+    female: 'Female',
+    other: 'Other',
+    healthIssues: 'Health Issues',
+    selectHealthIssues: 'Select your health issues',
+    diabetes: 'Diabetes',
+    bloodPressure: 'Blood Pressure',
+    thyroid: 'Thyroid',
+    allergies: 'Allergies',
+    heartDisease: 'Heart Disease',
+    obesity: 'Obesity',
+    none: 'None',
+    dietaryGoals: 'Dietary Goals',
+    weightLoss: 'Weight Loss',
+    weightGain: 'Weight Gain',
+    maintenance: 'Maintenance',
+    saveProfile: 'Save Profile',
+    editProfile: 'Edit Profile',
+
+    // Home Screen
+    scanFood: 'Scan Food',
+    uploadPhoto: 'Upload Photo',
+    takePhoto: 'Take Photo',
+    voiceInput: 'Voice Input',
+    manualEntry: 'Manual Entry',
+    todayMeals: 'Today\'s Meals',
+    breakfast: 'Breakfast',
+    lunch: 'Lunch',
+    snacks: 'Snacks',
+    dinner: 'Dinner',
+    totalCalories: 'Total Calories',
+    totalProtein: 'Total Protein',
+    totalCarbs: 'Total Carbs',
+    totalFat: 'Total Fat',
+    restaurantMode: 'Restaurant Mode',
+
+    // Food Analysis
+    analyzing: 'Analyzing your food...',
+    foodDetected: 'Food Detected',
+    nutritionalInfo: 'Nutritional Information',
+    calories: 'Calories',
+    protein: 'Protein',
+    carbohydrates: 'Carbohydrates',
+    fats: 'Fats',
+    fiber: 'Fiber',
+    sugar: 'Sugar',
+    vitamins: 'Vitamins',
+    minerals: 'Minerals',
+    healthRating: 'Health Rating',
+    good: 'Good',
+    moderate: 'Moderate',
+    avoid: 'Avoid',
+    recommendation: 'Recommendation',
+    portionSize: 'Portion Size',
+    bestTimeToEat: 'Best Time to Eat',
+    allergenWarning: 'Allergen Warning',
+    contains: 'Contains',
+    logThisMeal: 'Log This Meal',
+
+    // Suggestions
+    healthyAlternatives: 'Healthy Alternatives',
+    tryInstead: 'Try Instead',
+    whyBetter: 'Why It\'s Better',
+    watchRecipe: 'Watch Recipe Video',
+    suggestions: 'Suggestions',
+
+    // Dashboard
+    weeklyAnalytics: 'Weekly Analytics',
+    monthlyAnalytics: 'Monthly Analytics',
+    calorieIntake: 'Calorie Intake',
+    proteinConsumption: 'Protein Consumption',
+    weightTrends: 'Weight Trends',
+    last7Days: 'Last 7 Days',
+    last30Days: 'Last 30 Days',
+
+    // Diet Planner
+    aiDietPlanner: 'AI Diet Planner',
+    generateMealPlan: 'Generate Meal Plan',
+    mealPlan: 'Meal Plan',
+    forToday: 'For Today',
+
+    // Reminders
+    mealReminders: 'Meal Reminders',
+    setReminderTime: 'Set Reminder Time',
+    enableVoiceReminders: 'Enable Voice Reminders',
+    voiceReminder: 'Voice Reminder',
+    reminderSettings: 'Reminder Settings',
+
+    // Alerts
+    highSugarWarning: 'High Sugar Warning',
+    lowProteinAlert: 'Low Protein Alert',
+    sugarIntakeHigh: 'Your sugar intake is high today!',
+    proteinIntakeLow: 'Your protein intake is low today.',
+    calorieLimitExceeded: 'You\'ve exceeded your calorie limit today.',
+    stayHealthy: 'Stay healthy!',
+
+    // Grocery
+    groceryList: 'Grocery List',
+    addToGrocery: 'Add to Grocery',
+    groceriesBasedOnPlan: 'Groceries Based on Your Plan',
+
+    // Body Transformation
+    bodyTransformation: 'Body Transformation',
+    beforePhoto: 'Before Photo',
+    afterPhoto: 'After Photo',
+    uploadBefore: 'Upload Before Photo',
+    uploadAfter: 'Upload After Photo',
+    trackProgress: 'Track Progress',
+    notes: 'Notes',
+    currentWeight: 'Current Weight (kg)',
+
+    // Voice Messages
+    breakfastTime: 'It\'s breakfast time! Have a healthy breakfast.',
+    lunchTime: 'It\'s lunch time! Enjoy a nutritious meal.',
+    snackTime: 'Time for a healthy snack!',
+    dinnerTime: 'It\'s dinner time! Have a light and healthy dinner.',
+
+    // Common
+    save: 'Save',
+    cancel: 'Cancel',
+    delete: 'Delete',
+    edit: 'Edit',
+  },
+  telugu: {
+    // App Title & Navigation
+    appName: 'న్యూట్రిస్కాన్ AI',
+    home: 'హోమ్',
+    dashboard: 'డ్యాష్‌బోర్డ్',
+    profile: 'ప్రొఫైల్',
+    settings: 'సెట్టింగ్స్',
+
+    // Onboarding/Profile
+    welcome: 'న్యూట్రిస్కాన్ AI కి స్వాగతం',
+    setupProfile: 'మీ ప్రొఫైల్‌ని సెటప్ చేద్దాం',
+    name: 'పేరు',
+    age: 'వయస్సు',
+    weight: 'బరువు (కిలోలు)',
+    height: 'ఎత్తు (సెం.మీ)',
+    gender: 'లింగం',
+    male: 'పురుషుడు',
+    female: 'స్త్రీ',
+    other: 'ఇతర',
+    healthIssues: 'ఆరోగ్య సమస్యలు',
+    selectHealthIssues: 'మీ ఆరోగ్య సమస్యలను ఎంచుకోండి',
+    diabetes: 'డయాబెటీస్',
+    bloodPressure: 'రక్తపోటు',
+    thyroid: 'థైరాయిడ్',
+    allergies: 'అలర్జీలు',
+    heartDisease: 'గుండె జబ్బు',
+    obesity: 'స్థూలకాయం',
+    none: 'ఏదీ లేదు',
+    dietaryGoals: 'ఆహార లక్ష్యాలు',
+    weightLoss: 'బరువు తగ్గడం',
+    weightGain: 'బరువు పెరగడం',
+    maintenance: 'నిర్వహణ',
+    saveProfile: 'ప్రొఫైల్ సేవ్ చేయండి',
+    editProfile: 'ప్రొఫైల్ ఎడిట్ చేయండి',
+
+    // Home Screen
+    scanFood: 'ఆహారాన్ని స్కాన్ చేయండి',
+    uploadPhoto: 'ఫోటో అప్‌లోడ్ చేయండి',
+    takePhoto: 'ఫోటో తీయండి',
+    voiceInput: 'వాయిస్ ఇన్‌పుట్',
+    manualEntry: 'మాన్యువల్ ఎంట్రీ',
+    todayMeals: 'నేటి భోజనాలు',
+    breakfast: 'అల్పాహారం',
+    lunch: 'మధ్యాహ్న భోజనం',
+    snacks: 'స్నాక్స్',
+    dinner: 'రాత్రి భోజనం',
+    totalCalories: 'మొత్తం కేలరీలు',
+    totalProtein: 'మొత్తం ప్రోటీన్',
+    totalCarbs: 'మొత్తం కార్బోహైడ్రేట్లు',
+    totalFat: 'మొత్తం కొవ్వు',
+    restaurantMode: 'రెస్టారెంట్ మోడ్',
+
+    // Food Analysis
+    analyzing: 'మీ ఆహారాన్ని విశ్లేషిస్తోంది...',
+    foodDetected: 'ఆహారం గుర్తించబడింది',
+    nutritionalInfo: 'పోషక వివరాలు',
+    calories: 'కేలరీలు',
+    protein: 'ప్రోటీన్',
+    carbohydrates: 'కార్బోహైడ్రేట్లు',
+    fats: 'కొవ్వులు',
+    fiber: 'ఫైబర్',
+    sugar: 'చక్కెర',
+    vitamins: 'విటమిన్లు',
+    minerals: 'ఖనిజాలు',
+    healthRating: 'ఆరోగ్య రేటింగ్',
+    good: 'మంచిది',
+    moderate: 'మధ్యమం',
+    avoid: 'నివారించండి',
+    recommendation: 'సిఫార్సు',
+    portionSize: 'పోర్షన్ సైజ్',
+    bestTimeToEat: 'తినడానికి ఉత్తమ సమయం',
+    allergenWarning: 'అలర్జీ హెచ్చరిక',
+    contains: 'కలిగి ఉంది',
+    logThisMeal: 'ఈ భోజనాన్ని లాగ్ చేయండి',
+
+    // Suggestions
+    healthyAlternatives: 'ఆరోగ్యకరమైన ప్రత్యామ్నాయాలు',
+    tryInstead: 'దీనికి బదులుగా ప్రయత్నించండి',
+    whyBetter: 'ఎందుకు మెరుగైనది',
+    watchRecipe: 'రెసిపీ వీడియో చూడండి',
+    suggestions: 'సలహాలు',
+
+    // Dashboard
+    weeklyAnalytics: 'వారాంతపు విశ్లేషణ',
+    monthlyAnalytics: 'నెలవారీ విశ్లేషణ',
+    calorieIntake: 'కేలరీ తీసుకోలు',
+    proteinConsumption: 'ప్రోటీన్ వినియోగం',
+    weightTrends: 'బరువు ట్రెండ్స్',
+    last7Days: 'గత 7 రోజులు',
+    last30Days: 'గత 30 రోజులు',
+
+    // Diet Planner
+    aiDietPlanner: 'AI డయట్ ప్లానర్',
+    generateMealPlan: 'భోజన ప్రణాళికను రూపొందించండి',
+    mealPlan: 'భోజన ప్రణాళిక',
+    forToday: 'ఈరోజు కోసం',
+
+    // Reminders
+    mealReminders: 'భోజన రిమైండర్లు',
+    setReminderTime: 'రిమైండర్ సమయాన్ని సెట్ చేయండి',
+    enableVoiceReminders: 'వాయిస్ రిమైండర్లను ప్రారంభించండి',
+    voiceReminder: 'వాయిస్ రిమైండర్',
+    reminderSettings: 'రిమైండర్ సెట్టింగ్స్',
+
+    // Alerts
+    highSugarWarning: 'అధిక చక్కెర హెచ్చరిక',
+    lowProteinAlert: 'తక్కువ ప్రోటీన్ హెచ్చరిక',
+    sugarIntakeHigh: 'మీ చక్కెర తీసుకోలు ఈరోజు అధికంగా ఉంది!',
+    proteinIntakeLow: 'మీ ప్రోటీన్ తీసుకోలు ఈరోజు తక్కువగా ఉంది.',
+    calorieLimitExceeded: 'మీరు ఈరోజు కేలరీ పరిమితిని మించారు.',
+    stayHealthy: 'ఆరోగ్యంగా ఉండండి!',
+
+    // Grocery
+    groceryList: 'కిరానా జాబితా',
+    addToGrocery: 'కిరానాకు జోడించండి',
+    groceriesBasedOnPlan: 'మీ ప్రణాళిక ఆధారంగా కిరానా',
+
+    // Body Transformation
+    bodyTransformation: 'శరీర మార్పు',
+    beforePhoto: 'ముందు ఫోటో',
+    afterPhoto: 'తర్వాత ఫోటో',
+    uploadBefore: 'ముందు ఫోటో అప్‌లోడ్ చేయండి',
+    uploadAfter: 'తర్వాత ఫోటో అప్‌లోడ్ చేయండి',
+    trackProgress: 'పురోగతిని ట్రాక్ చేయండి',
+    notes: 'గమనికలు',
+    currentWeight: 'ప్రస్తుత బరువు (కిలోలు)',
+
+    // Voice Messages
+    breakfastTime: 'మీ అల్పాహార సమయం అయ్యింది, ఆరోగ్యకరంగా టిఫిన్ తినండి.',
+    lunchTime: 'మీ మధ్యాహ్న భోజన సమయం, పోషకవిలువల భోజనం తినండి.',
+    snackTime: 'ఆరోగ్యకరమైన స్నాక్ తినడానికి సమయం!',
+    dinnerTime: 'మీ రాత్రి భోజన సమయం, తేలికగా ఆరోగ్యకరంగా భోజనం తినండి.',
+
+    // Common
+    save: 'సేవ్ చేయండి',
+    cancel: 'రద్దు చేయండి',
+    delete: 'తొలగించండి',
+    edit: 'ఎడిట్ చేయండి',
+  },
+  tamil: {
+    // App Title & Navigation
+    appName: 'நியூட்ரிஸ்கேன் AI',
+    home: 'முகப்பு',
+    dashboard: 'டாஷ்போர்டு',
+    profile: 'சுயவிவரம்',
+    settings: 'அமைப்புகள்',
+
+    // Onboarding/Profile
+    welcome: 'நியூட்ரிஸ்கேன் AI க்கு வரவேற்கிறோம்',
+    setupProfile: 'உங்கள் சுயவிவரத்தை அமைப்போம்',
+    name: 'பெயர்',
+    age: 'வயது',
+    weight: 'எடை (கிலோ)',
+    height: 'உயரம் (செமீ)',
+    gender: 'பாலினம்',
+    male: 'ஆண்',
+    female: 'பெண்',
+    other: 'மற்றவை',
+    healthIssues: 'சுகாதார பிரச்சனைகள்',
+    selectHealthIssues: 'உங்கள் சுகாதார பிரச்சனைகளைத் தேர்ந்தெடுக்கவும்',
+    diabetes: 'நீரிழிவு',
+    bloodPressure: 'இரத்த அழுத்தம்',
+    thyroid: 'தைராய்டு',
+    allergies: 'ஒவ்வாமைகள்',
+    heartDisease: 'இதய நோய்',
+    obesity: 'தொப்பை',
+    none: 'ஏதுமில்லை',
+    dietaryGoals: 'உணவு இலக்குகள்',
+    weightLoss: 'எடை இழப்பு',
+    weightGain: 'எடை அதிகரிப்பு',
+    maintenance: 'பராமரிப்பு',
+    saveProfile: 'சுயவிவரத்தை சேமிக்கவும்',
+    editProfile: 'சுயவிவரத்தை திருத்தவும்',
+
+    // Home Screen
+    scanFood: 'உணவை ஸ்கேன் செய்யவும்',
+    uploadPhoto: 'புகைப்படம் பதிவேற்றவும்',
+    takePhoto: 'புகைப்படம் எடுக்கவும்',
+    voiceInput: 'குரல் உள்ளீடு',
+    manualEntry: 'கைமுறை உள்ளீடு',
+    todayMeals: 'இன்றைய உணவுகள்',
+    breakfast: 'காலை உணவு',
+    lunch: 'மதிய உணவு',
+    snacks: 'ஸ்நாக்ஸ்',
+    dinner: 'இரவு உணவு',
+    totalCalories: 'மொத்த கலோரிகள்',
+    totalProtein: 'மொத்த புரதம்',
+    totalCarbs: 'மொத்த கார்போஹைட்ரேட்கள்',
+    totalFat: 'மொத்த கொழுப்பு',
+    restaurantMode: 'உணவக முறை',
+
+    // Food Analysis
+    analyzing: 'உங்கள் உணவை பகுப்பாய்வு செய்கிறது...',
+    foodDetected: 'உணவு கண்டறியப்பட்டது',
+    nutritionalInfo: 'ஊட்டச்சத்து தகவல்',
+    calories: 'கலோரிகள்',
+    protein: 'புரதம்',
+    carbohydrates: 'கார்போஹைட்ரேட்கள்',
+    fats: 'கொழுப்புகள்',
+    fiber: 'நார்ச்சத்து',
+    sugar: 'சர்க்கரை',
+    vitamins: 'வைட்டமின்கள்',
+    minerals: 'தாதுக்கள்',
+    healthRating: 'சுகாதார மதிப்பீடு',
+    good: 'நல்லது',
+    moderate: 'மிதமானது',
+    avoid: 'தவிர்க்கவும்',
+    recommendation: 'பரிந்துரை',
+    portionSize: 'பகுதி அளவு',
+    bestTimeToEat: 'உண்ண சிறந்த நேரம்',
+    allergenWarning: 'ஒவ்வாமை எச்சரிக்கை',
+    contains: 'கொண்டுள்ளது',
+    logThisMeal: 'இந்த உணவை பதிவு செய்யவும்',
+
+    // Suggestions
+    healthyAlternatives: 'ஆரோக்கியமான மாற்றுகள்',
+    tryInstead: 'இதற்கு பதிலாக முயற்சிக்கவும்',
+    whyBetter: 'ஏன் சிறந்தது',
+    watchRecipe: 'சமையல் குறிப்பு வீடியோவைப் பாருங்கள்',
+    suggestions: 'பரிந்துரைகள்',
+
+    // Dashboard
+    weeklyAnalytics: 'வாராந்திர பகுப்பாய்வு',
+    monthlyAnalytics: 'மாதாந்திர பகுப்பாய்வு',
+    calorieIntake: 'கலோரி உட்கொள்ளல்',
+    proteinConsumption: 'புரத நுகர்வு',
+    weightTrends: 'எடை போக்குகள்',
+    last7Days: 'கடந்த 7 நாட்கள்',
+    last30Days: 'கடந்த 30 நாட்கள்',
+
+    // Diet Planner
+    aiDietPlanner: 'AI உணவு திட்டமிடுபவர்',
+    generateMealPlan: 'உணவு திட்டத்தை உருவாக்கவும்',
+    mealPlan: 'உணவு திட்டம்',
+    forToday: 'இன்றையது',
+
+    // Reminders
+    mealReminders: 'உணவு நினைவூட்டல்கள்',
+    setReminderTime: 'நினைவூட்டல் நேரத்தை அமைக்கவும்',
+    enableVoiceReminders: 'குரல் நினைவூட்டல்களை இயக்கவும்',
+    voiceReminder: 'குரல் நினைவூட்டல்',
+    reminderSettings: 'நினைவூட்டல் அமைப்புகள்',
+
+    // Alerts
+    highSugarWarning: 'அதிக சர்க்கரை எச்சரிக்கை',
+    lowProteinAlert: 'குறைந்த புரதம் எச்சரிக்கை',
+    sugarIntakeHigh: 'இன்று உங்கள் சர்க்கரை உட்கொள்ளல் அதிகமாக உள்ளது!',
+    proteinIntakeLow: 'இன்று உங்கள் புரத உட்கொள்ளல் குறைவாக உள்ளது.',
+    calorieLimitExceeded: 'இன்று நீங்கள் கலோரி வரம்பை மீறிவிட்டீர்கள்.',
+    stayHealthy: 'ஆரோக்கியமாக இருங்கள்!',
+
+    // Grocery
+    groceryList: 'மளிகை பட்டியல்',
+    addToGrocery: 'மளிகைக்கு சேர்க்கவும்',
+    groceriesBasedOnPlan: 'உங்கள் திட்டத்தின் அடிப்படையில் மளிகை',
+
+    // Body Transformation
+    bodyTransformation: 'உடல் மாற்றம்',
+    beforePhoto: 'முன் புகைப்படம்',
+    afterPhoto: 'பின் புகைப்படம்',
+    uploadBefore: 'முன் புகைப்படத்தை பதிவேற்றவும்',
+    uploadAfter: 'பின் புகைப்படத்தை பதிவேற்றவும்',
+    trackProgress: 'முன்னேற்றத்தை கண்காணிக்கவும்',
+    notes: 'குறிப்புகள்',
+    currentWeight: 'தற்போதைய எடை (கிலோ)',
+
+    // Voice Messages
+    breakfastTime: 'உங்கள் காலை உணவு நேரம் வந்துவிட்டது, ஆரோக்கியமாக உண்ணுங்கள்.',
+    lunchTime: 'உங்கள் மதிய உணவு நேரம் வந்துவிட்டது, ஊட்டச்சத்து உணவு உண்ணுங்கள்.',
+    snackTime: 'ஆரோக்கியமான ஸ்நாக்ஸ் உண்ண நேரம்!',
+    dinnerTime: 'உங்கள் இரவு உணவு நேரம் வந்துவிட்டது, இலகுவாக ஆரோக்கியமாக உண்ணுங்கள்.',
+
+    // Common
+    save: 'சேமிக்கவும்',
+    cancel: 'ரத்துசெய்',
+    delete: 'நீக்கு',
+    edit: 'திருத்து',
+  },
+  kannada: {
+    // App Title & Navigation
+    appName: 'ನ್ಯೂಟ್ರಿಸ್ಕ್ಯಾನ್ AI',
+    home: 'ಹೋಮ್',
+    dashboard: 'ಡ್ಯಾಶ್‌ಬೋರ್ಡ್',
+    profile: 'ಪ್ರೊಫೈಲ್',
+    settings: 'ಸೆಟ್ಟಿಂಗ್‌ಗಳು',
+
+    // Onboarding/Profile
+    welcome: 'ನ್ಯೂಟ್ರಿಸ್ಕ್ಯಾನ್ AI ಗೆ ಸ್ವಾಗತ',
+    setupProfile: 'ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಸೆಟಪ್ ಮಾಡೋಣ',
+    name: 'ಹೆಸರು',
+    age: 'ವಯಸ್ಸು',
+    weight: 'ತೂಕ (ಕೆಜಿ)',
+    height: 'ಎತ್ತರ (ಸೆಮೀ)',
+    gender: 'ಲಿಂಗ',
+    male: 'ಪುರುಷ',
+    female: 'ಮಹಿಳೆ',
+    other: 'ಇತರೆ',
+    healthIssues: 'ಆರೋಗ್ಯ ಸಮಸ್ಯೆಗಳು',
+    selectHealthIssues: 'ನಿಮ್ಮ ಆರೋಗ್ಯ ಸಮಸ್ಯೆಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ',
+    diabetes: 'ಡಯಾಬಿಟೀಸ್',
+    bloodPressure: 'ರಕ್ತದೊತ್ತಡ',
+    thyroid: 'ಥೈರಾಯ್ಡ್',
+    allergies: 'ಅಲರ್ಜಿಗಳು',
+    heartDisease: 'ಹೃದಯ ರೋಗ',
+    obesity: 'ಸ್ಥೂಲತೆ',
+    none: 'ಯಾವುದೂ ಇಲ್ಲ',
+    dietaryGoals: 'ಆಹಾರ ಗುರಿಗಳು',
+    weightLoss: 'ತೂಕ ಇಳಿಕೆ',
+    weightGain: 'ತೂಕ ಹೆಚ್ಚಳ',
+    maintenance: 'ನಿರ್ವಹಣೆ',
+    saveProfile: 'ಪ್ರೊಫೈಲ್ ಸೇವ್ ಮಾಡಿ',
+    editProfile: 'ಪ್ರೊಫೈಲ್ ಎಡಿಟ್ ಮಾಡಿ',
+
+    // Home Screen
+    scanFood: 'ಆಹಾರವನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ',
+    uploadPhoto: 'ಫೋಟೋ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ',
+    takePhoto: 'ಫೋಟೋ ತೆಗೆದುಕೊಳ್ಳಿ',
+    voiceInput: 'ಧ್ವನಿ ಇನ್‌ಪುಟ್',
+    manualEntry: 'ಮ್ಯಾನುಯಲ್ ಎಂಟ್ರಿ',
+    todayMeals: 'ಇಂದಿನ ಊಟಗಳು',
+    breakfast: 'ಬ್ರೇಕ್‌ಫಾಸ್ಟ್',
+    lunch: 'ಲಂಚ್',
+    snacks: 'ಸ್ನಾಕ್ಸ್',
+    dinner: 'ಡಿನ್ನರ್',
+    totalCalories: 'ಒಟ್ಟು ಕ್ಯಾಲೋರಿಗಳು',
+    totalProtein: 'ಒಟ್ಟು ಪ್ರೋಟೀನ್',
+    totalCarbs: 'ಒಟ್ಟು ಕಾರ್ಬೋಹೈಡ್ರೇಟ್‌ಗಳು',
+    totalFat: 'ಒಟ್ಟು ಕೊಬ್ಬು',
+    restaurantMode: 'ರೆಸ್ಟೋರೆಂಟ್ ಮೋಡ್',
+
+    // Food Analysis
+    analyzing: 'ನಿಮ್ಮ ಆಹಾರವನ್ನು ವಿಶ್ಲೇಷಿಸುತ್ತಿದೆ...',
+    foodDetected: 'ಆಹಾರ ಪತ್ತೆಯಾಗಿದೆ',
+    nutritionalInfo: 'ಪೌಷ್ಟಿಕಾಂಶ ಮಾಹಿತಿ',
+    calories: 'ಕ್ಯಾಲೋರಿಗಳು',
+    protein: 'ಪ್ರೋಟೀನ್',
+    carbohydrates: 'ಕಾರ್ಬೋಹೈಡ್ರೇಟ್‌ಗಳು',
+    fats: 'ಕೊಬ್ಬುಗಳು',
+    fiber: 'ಫೈಬರ್',
+    sugar: 'ಸಕ್ಕರೆ',
+    vitamins: 'ವಿಟಮಿನ್‌ಗಳು',
+    minerals: 'ಖನಿಜಗಳು',
+    healthRating: 'ಆರೋಗ್ಯ ರೇಟಿಂಗ್',
+    good: 'ಒಳ್ಳೆಯದು',
+    moderate: 'ಮಧ್ಯಮ',
+    avoid: 'ತಪ್ಪಿಸಿ',
+    recommendation: 'ಶಿಫಾರಸು',
+    portionSize: 'ಪೋರ್ಷನ್ ಸೈಜ್',
+    bestTimeToEat: 'ತಿನ್ನಲು ಉತ್ತಮ ಸಮಯ',
+    allergenWarning: 'ಅಲರ್ಜಿ ಎಚ್ಚರಿಕೆ',
+    contains: 'ಒಳಗೊಂಡಿದೆ',
+    logThisMeal: 'ಈ ಊಟವನ್ನು ಲಾಗ್ ಮಾಡಿ',
+
+    // Suggestions
+    healthyAlternatives: 'ಆರೋಗ್ಯಕರ ಪರ್ಯಾಯಗಳು',
+    tryInstead: 'ಬದಲಾಗಿ ಪ್ರಯತ್ನಿಸಿ',
+    whyBetter: 'ಏಕೆ ಉತ್ತಮ',
+    watchRecipe: 'ರೆಸಿಪಿ ವೀಡಿಯೊ ನೋಡಿ',
+    suggestions: 'ಸಲಹೆಗಳು',
+
+    // Dashboard
+    weeklyAnalytics: 'ವಾರಿಕ ವಿಶ್ಲೇಷಣೆ',
+    monthlyAnalytics: 'ಮಾಸಿಕ ವಿಶ್ಲೇಷಣೆ',
+    calorieIntake: 'ಕ್ಯಾಲೋರಿ ಸೇವನೆ',
+    proteinConsumption: 'ಪ್ರೋಟೀನ್ ಬಳಕೆ',
+    weightTrends: 'ತೂಕ ಪ್ರವೃತ್ತಿಗಳು',
+    last7Days: 'ಕಳೆದ 7 ದಿನಗಳು',
+    last30Days: 'ಕಳೆದ 30 ದಿನಗಳು',
+
+    // Diet Planner
+    aiDietPlanner: 'AI ಡಯಟ್ ಪ್ಲಾನರ್',
+    generateMealPlan: 'ಊಟದ ಯೋಜನೆಯನ್ನು ರಚಿಸಿ',
+    mealPlan: 'ಊಟದ ಯೋಜನೆ',
+    forToday: 'ಇಂದಿನದ್ದು',
+
+    // Reminders
+    mealReminders: 'ಊಟದ ಜ್ಞಾಪನೆಗಳು',
+    setReminderTime: 'ಜ್ಞಾಪನೆ ಸಮಯವನ್ನು ಹೊಂದಿಸಿ',
+    enableVoiceReminders: 'ಧ್ವನಿ ಜ್ಞಾಪನೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ',
+    voiceReminder: 'ಧ್ವನಿ ಜ್ಞಾಪನೆ',
+    reminderSettings: 'ಜ್ಞಾಪನೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳು',
+
+    // Alerts
+    highSugarWarning: 'ಹೆಚ್ಚಿನ ಸಕ್ಕರೆ ಎಚ್ಚರಿಕೆ',
+    lowProteinAlert: 'ಕಡಿಮೆ ಪ್ರೋಟೀನ್ ಎಚ್ಚರಿಕೆ',
+    sugarIntakeHigh: 'ಇಂದು ನಿಮ್ಮ ಸಕ್ಕರೆ ಸೇವನೆ ಹೆಚ್ಚಾಗಿದೆ!',
+    proteinIntakeLow: 'ಇಂದು ನಿಮ್ಮ ಪ್ರೋಟೀನ್ ಸೇವನೆ ಕಡಿಮೆಯಾಗಿದೆ.',
+    calorieLimitExceeded: 'ಇಂದು ನೀವು ಕ್ಯಾಲೋರಿ ಮಿತಿಯನ್ನು ಮೀರಿದ್ದೀರಿ.',
+    stayHealthy: 'ಆರೋಗ್ಯವಾಗಿರಿ!',
+
+    // Grocery
+    groceryList: 'ಹಂಚಿಕೆ ಪಟ್ಟಿ',
+    addToGrocery: 'ಹಂಚಿಕೆಗೆ ಸೇರಿಸಿ',
+    groceriesBasedOnPlan: 'ನಿಮ್ಮ ಯೋಜನೆಯ ಆಧಾರದ ಮೇಲೆ ಹಂಚಿಕೆ',
+
+    // Body Transformation
+    bodyTransformation: 'ದೇಹ ರೂಪಾಂತರ',
+    beforePhoto: 'ಮೊದಲು ಫೋಟೋ',
+    afterPhoto: 'ನಂತರ ಫೋಟೋ',
+    uploadBefore: 'ಮೊದಲು ಫೋಟೋ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ',
+    uploadAfter: 'ನಂತರ ಫೋಟೋ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ',
+    trackProgress: 'ಪ್ರಗತಿಯನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ',
+    notes: 'ಟಿಪ್ಪಣಿಗಳು',
+    currentWeight: 'ಪ್ರಸ್ತುತ ತೂಕ (ಕೆಜಿ)',
+
+    // Voice Messages
+    breakfastTime: 'ನಿಮ್ಮ ಬ್ರೇಕ್‌ಫಾಸ್ಟ್ ಸಮಯ ಆಗಿದೆ, ಆರೋಗ್ಯಕರವಾಗಿ ತಿನ್ನಿ.',
+    lunchTime: 'ನಿಮ್ಮ ಲಂಚ್ ಸಮಯ ಆಗಿದೆ, ಪೌಷ್ಟಿಕಾಂಶದ ಊಟ ತಿನ್ನಿ.',
+    snackTime: 'ಆರೋಗ್ಯಕರ ಸ್ನಾಕ್ ತಿನ್ನಲು ಸಮಯ!',
+    dinnerTime: 'ನಿಮ್ಮ ಡಿನ್ನರ್ ಸಮಯ ಆಗಿದೆ, ಲಘುವಾಗಿ ಆರೋಗ್ಯಕರವಾಗಿ ತಿನ್ನಿ.',
+
+    // Common
+    save: 'ಉಳಿಸಿ',
+    cancel: 'ರದ್ದುಮಾಡಿ',
+    delete: 'ಅಳಿಸಿ',
+    edit: 'ಎಡಿಟ್ ಮಾಡಿ',
+  },
+};
+
+export const useTranslation = (language: Language) => {
+  return translations[language];
+};
